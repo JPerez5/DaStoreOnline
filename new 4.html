@@ -1,0 +1,118 @@
+<!doctype html>
+	<html>
+		<head>
+				<title> Nerf the Battle </title>
+			<style>
+				img{height:200px}
+				input{width:20px}
+				span{
+					color: green;
+				}
+				body{
+					background: linear-gradient(to right, green, red);
+					}
+			</style>
+			<script>
+			function purchase1(){
+				var amount = parseFloat(document.getElementById("quantity1").value);
+				var build = "";
+				if (amount <= 50 && amount > 0){
+					var totalwotax = amount * 60;
+					var tax = totalwotax * 0.0875;
+					var total = totalwotax + tax;
+					var result = document.getElementById("result");
+					build += "subtotal: " + "$" + totalwotax + "<br>";
+					build += "tax: " + "$" + tax.toFixed(2) + "<br>";
+					build += "-------------" + "<br>";
+					build += "total: " + "$" + total + "<br>";
+					build += "<br>";
+				}
+				else if (amount > 50){
+					var result = document.getElementById("result");
+					build += alert("only 50 in stock");
+				}
+				result.innerHTML = build;
+			}
+			
+			function purchase2(){
+				var amount = parseFloat(document.getElementById("quantity2").value);
+				var build = "";
+				if (amount <= 50 && amount > 0){
+					var totalwotax = amount * 60;
+					var tax = totalwotax * 0.0875;
+					var total = totalwotax + tax;
+					var result = document.getElementById("result");
+					build += "subtotal: " + "$" + totalwotax + "<br>";
+					build += "tax: " + "$" + tax.toFixed(2) + "<br>";
+					build += "-------------" + "<br>";
+					build += "total: " + "$" + total + "<br>";
+					build += "<br>";
+				}
+				else if (amount > 50){
+					var result = document.getElementById("result");
+					var build = "";
+					build += alert("only 50 in stock");
+				}
+				result2.innerHTML = build;
+			}
+			
+			function purchase3(){
+				var amount = parseFloat(document.getElementById("quantity3").value);
+				var build = "";
+				if (amount <= 50 && amount > 0){
+					var totalwotax = amount * 60;
+					var tax = totalwotax * 0.0875;
+					var total = totalwotax + tax;
+					var result = document.getElementById("result");
+					build += "subtotal: " + "$" + totalwotax + "<br>";
+					build += "tax: " + "$" + tax.toFixed(2) + "<br>";
+					build += "-------------" + "<br>";
+					build += "total: " + "$" + total + "<br>";
+					build += "<br>";
+				}
+				else if (amount > 50){
+					var result = document.getElementById("result");
+					var build = "";
+					build += alert("only 50 in stock");
+				}
+				result3.innerHTML = build;
+			}
+			</script>
+		</head>
+		<body>
+		Your Life is Nerf or Nothing <br> <br>
+			<div>
+			<button onclick="purchase1()">
+				<h1>Nerf Minigun</h1>
+				<img src="https://images-na.ssl-images-amazon.com/images/I/81x6sRmCF8L._SY355_.jpg" alt="minigun">
+				<p>Batery powered for fast shooting <br> Darts travel over 500 feet</p>
+				<span>$60</span> per unit <br>
+				Quantity:<input type="text" id="quantity1">
+				purchase<br><br>
+				<div id="result"></div>
+		</button>
+		
+			<button onclick="purchase2()">
+				<h1>Nerf Minigun</h1>
+				<img src="https://www.dailydot.com/wp-content/uploads/584/9c/nerf3.png" alt="Spec Ops Sub machine gun">
+				<p>Batery powered for fast shooting <br> Darts travel over 500 feet</p>
+				<span>$32</span> per unit <br>
+				Quantity:<input type="text" id="quantity2">
+				purchase<br><br>
+				<div id="result2"></div>
+		</button>
+		
+			<button onclick="purchase3()">
+				<h1>Nerf Minigun</h1>
+				<img src="https://d2cdo4blch85n8.cloudfront.net/wp-content/uploads/2017/02/NERF-New-Blaster
+				s-Coming-Your-Way-In-2017-Featured-image-672x372.jpg" alt="Spec Ops Sub machine gun">
+				<p>Batery powered for fast shooting <br> Darts travel over 500 feet</p>
+				<span>$65</span> per unit <br>
+				Quantity:<input type="text" id="quantity3">
+				purchase<br><br>
+				<div id="result3"></div>
+			</div>
+		</button>
+		
+		</body>
+	</html>
